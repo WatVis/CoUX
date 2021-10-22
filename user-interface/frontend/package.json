@@ -1,0 +1,60 @@
+{
+  "name": "coux",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.4.0",
+    "@craco/craco": "^6.1.0",
+    "@juggle/resize-observer": "^3.2.0",
+    "@react-hook/window-size": "^3.0.7",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "antd": "^4.12.2",
+    "axios": "^0.21.1",
+    "craco-antd": "^1.19.0",
+    "d3": "^6.3.1",
+    "d3-sankey": "^0.12.3",
+    "moment": "^2.29.1",
+    "node-sass": "4.14.1",
+    "ramda": "^0.27.1",
+    "randomcolor": "^0.6.2",
+    "react": "^17.0.1",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^17.0.1",
+    "react-player": "^2.8.2",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "react-tracker": "^0.0.8",
+    "react-tracking": "^8.1.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^2.3.1",
+    "source-map-explorer": "^2.5.2",
+    "treacker": "^1.0.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "prettier": "prettier --config .prettierrc --write ./src/**/*.{js,css,scss,ts,json}"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

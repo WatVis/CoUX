@@ -1,0 +1,112 @@
+.add-heuristic {
+  form {
+    padding: 20px;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .ant-btn-primary[disabled],
+    .ant-btn-primary[disabled]:hover,
+    .ant-btn-primary[disabled]:focus,
+    .ant-btn-primary[disabled]:active {
+      border: none;
+      background: rgba(0, 0, 0, 0.2);
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .ant-form-item-label > label {
+    height: 40px !important;
+  }
+  .ant-form-horizontal .ant-form-item-label {
+    width: 50px;
+  }
+
+  .ant-select-selector {
+    border: none !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    background: #2e315a !important;
+  }
+  .ant-select-arrow {
+    color: #f9f9f9 !important;
+  }
+
+  .ant-select-single .ant-select-selection-item {
+    line-height: 40px !important;
+  }
+
+  .ant-input {
+    border: none !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+  }
+
+  .ant-radio-group {
+    height: 40px !important;
+    align-items: center !important;
+    display: flex !important;
+    background: #2e315a !important;
+    padding: 0 15px !important;
+    border-radius: 8px !important;
+  }
+
+  .list-header {
+    color: rgb(101, 214, 206);
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    cursor: default;
+    padding: 5px 20px;
+  }
+
+  .heuristic {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 0 20px;
+    margin-bottom: 8px;
+
+    p {
+      font-size: 15px;
+      margin-top: 0;
+      word-break: break-all;
+      color: #f9f9f9;
+      text-align: justify;
+      font-weight: 400;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 8px 10px;
+      padding-right: 40px;
+      height: 35px;
+      margin: 0;
+    }
+
+    .heuristic-delete-btn {
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      top: 0;
+      height: 35px;
+      border-left: 2px solid #3c4267;
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s all ease;
+
+      &:hover {
+        background: #f53e4c;
+      }
+    }
+  }
+}
+
+.ant-drawer-body {
+  padding: 0 !important;
+}

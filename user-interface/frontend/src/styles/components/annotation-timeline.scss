@@ -1,0 +1,53 @@
+.annotation-timeline {
+  width: calc(100% - 30px);
+  left: 15px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.annotations {
+  bottom: 0;
+  position: absolute;
+
+  .annotation {
+    border-radius: 2px;
+    margin-top: 2px;
+    position: absolute;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &.me {
+      //   border: 5px solid #3ace7c;
+      // background: #3ace7c !important;
+    }
+    transition: width, height 0.1s ease;
+
+    &:hover {
+      // width: 11px !important;
+      // height: 11px !important;
+      // top: -2px;
+      // left: -2px;
+      border: 2px solid #f9f9f9;
+    }
+
+    &.not-active {
+      background: transparent !important;
+      border: 2px solid #f9f9f9;
+    }
+
+    &.is-updated {
+      animation: blinker 1s linear infinite;
+    }
+  }
+}
+
+.annotation-popover .ant-popover-inner-content {
+  padding: 0 !important;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

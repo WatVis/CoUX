@@ -1,0 +1,30 @@
+.logo {
+  position: absolute;
+  color: #f9f9f9;
+  margin: 0;
+  font-family: Roboto;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-left: 30px;
+  border: 1px solid #f9f9f9;
+  border-radius: 2px;
+  line-height: 19px;
+  padding: 2px;
+  transition: 0.2s all ease;
+
+  &:hover {
+    background: #f9f9f9;
+    color: #212442;
+  }
+
+  &.centered {
+    margin-left: 0;
+  }
+
+  strong {
+    font-weight: 500;
+    display: inline;
+  }
+}

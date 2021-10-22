@@ -1,0 +1,187 @@
+.video-timeline {
+  height: 10px;
+  // background: #212442;
+  width: calc(100% - 30px);
+  left: 15px;
+  position: relative;
+}
+
+.progress-bar-container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 8px;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &:hover:not([aria-disabled="true"]) {
+    .progress-list {
+      transform-origin: top;
+      transform: none;
+      transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .exp-segment-hover-effect {
+      transform-origin: top;
+      transform: scaleY(1);
+      transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+    outline: none;
+
+    .progress-bar-segments-container {
+      width: 100%;
+      z-index: 32;
+      position: relative;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+
+.progress-bar-segment-hover-container {
+  z-index: 32;
+  position: relative;
+  left: 0;
+  height: 100%;
+  float: left;
+
+  &:last-child {
+    border-radius: 0 3px 3px 0;
+  }
+  &:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+
+  .progress-bar-padding {
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    bottom: 0;
+    z-index: 28;
+  }
+
+  .progress-list {
+    z-index: 39;
+    background: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(0.8);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+
+    .load-progress,
+    .play-progress,
+    .hover-progress {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: 0 0;
+    }
+
+    .play-progress {
+      background: #f53e4c;
+      z-index: 34;
+    }
+
+    .load-progress {
+      z-index: 33;
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.exp-segment-hover-effect {
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.exp-segment-hover-container {
+  &:hover {
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.scrubber-container {
+  position: absolute;
+  top: -3px;
+  z-index: 43;
+  margin-left: -5px;
+}
+
+.scrubber-button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  transition: transform 0.1s cubic-bezier(0.4, 0, 1, 1);
+  transform: scale(0);
+  background-color: #f53e4c;
+  &:hover {
+    box-shadow: rgba(245, 62, 76, 0.2) 0px 0px 15px 0px,
+      rgba(245, 62, 76, 0.15) 0 0 0px 7px;
+  }
+}
+
+.scrubber-pull-indicator {
+  position: absolute;
+  z-index: 42;
+  bottom: 16.9px;
+  left: 6.5px;
+  transform: rotate(45deg);
+}
+
+// .scrubber-pull-indicator::before {
+//   display: block;
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   left: 0;
+//   opacity: 0;
+//   width: 6.5px;
+//   height: 6.5px;
+//   border-style: solid;
+//   border-width: 2px 0 0 2px;
+//   border-color: #eaeaea;
+// }
+
+// .scrubber-pull-indicator::after {
+//   display: block;
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   left: 0;
+//   opacity: 0;
+//   width: 6.5px;
+//   height: 6.5px;
+//   border-style: solid;
+//   border-width: 2px 0 0 2px;
+//   border-color: #eaeaea;
+// }
+
+.progress-bar-container:hover:not([aria-disabled="true"]) .scrubber-button,
+.touch-mode
+  .progress-bar-container:not([aria-disabled="true"])
+  .scrubber-button,
+.drag .scrubber-button {
+  transform: none;
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}

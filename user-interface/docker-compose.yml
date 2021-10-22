@@ -1,0 +1,43 @@
+version: "3"
+services:
+  coux_frontend:
+    container_name: coux_frontend
+    restart: always
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    links:
+      - coux_backend
+    depends_on:
+      - coux_backend
+    environment:
+      - APP_CONFIG_API_URL=//site.com:8080
+  coux_backend:
+    container_name: coux_backend
+    restart: always
+    build:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/assets:/app/assets
+    ports:
+      - "8080:8888"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongo:27017/coux
+      - ADMIN_URL=//site.com:8080
+      - PORT=8888
+  mongo:
+    container_name: mongo
+    restart: always
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"

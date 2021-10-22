@@ -1,0 +1,152 @@
+.video {
+  height: 100%;
+  position: relative;
+  width: calc(100% - 450px);
+  background: #262b4e;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  .player-wrapper {
+    position: relative;
+    // padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+    padding-top: calc(100vh - 315px);
+    // padding-top: calc(100vh - 250px);
+    @media (max-width: 768px) {
+      // padding-top: calc(100vh - 300px);
+    }
+    .react-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+      transparent 100%
+    );
+    height: 200px;
+    opacity: 0;
+    transition: 0.3s ease all;
+    z-index: 98;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .timeline {
+    width: 100%;
+  }
+
+  .non-timeline {
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 20px;
+    color: #72779c;
+    z-index: 999;
+
+    .left-controls {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .ant-btn {
+        margin-right: 30px;
+      }
+
+      .repeat {
+        transition: 0.3s all ease;
+        padding: 5px;
+        border-radius: 2px;
+        background: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #f9f9f9;
+        &:hover {
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      .time {
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-left: 15px;
+        color: #ededed;
+        span {
+          color: #fff;
+        }
+      }
+    }
+
+    .right-controls {
+      .anticon {
+        margin-left: 20px;
+        transition: 0.3s all ease;
+        padding: 5px;
+        border-radius: 2px;
+        background: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #f9f9f9;
+        &:hover {
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .semantics {
+      opacity: 1;
+    }
+    .controls {
+      opacity: 1;
+    }
+  }
+}
+
+.video-control-data {
+  width: 100%;
+  overflow-x: hidden;
+  // padding-bottom: 40px;
+}
+
+.more {
+  position: relative;
+  background: #212442;
+  border-color: #212442;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 0;
+
+  &:hover {
+    background: #202442;
+    border-color: #202442;
+  }
+
+  &:focus {
+    background: #212442;
+    border-color: #212442;
+  }
+}
+
+.ant-divider-dashed {
+  background: none;
+  border-color: #5d5f6e;
+  border-style: dashed;
+  border-width: 1px 0 0;
+  margin: 20px 0;
+}

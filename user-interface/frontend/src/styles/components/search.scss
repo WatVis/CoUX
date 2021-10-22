@@ -1,0 +1,19 @@
+.search-box {
+  width: 300px;
+  background: #262b4e;
+  border: none;
+  input {
+    background: #262b4e;
+    border: none;
+  }
+  .ant-btn {
+    background: #262b4e;
+    border: none;
+  }
+  .anticon {
+    color: #f9f9f9;
+  }
+  .ant-input-search-icon::before {
+    display: none;
+  }
+}

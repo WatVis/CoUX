@@ -1,0 +1,64 @@
+#nav {
+  position: absolute;
+  z-index: 98;
+  list-style-type: none;
+  margin: 0;
+  padding: 40px 0;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: 0.3s all ease-in;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .nav-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid rgba($color: #000000, $alpha: 0.2);
+    .nav-avatar {
+      border-radius: 10px;
+    }
+
+    .nav-user-email {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 20px;
+      font-family: "Roboto";
+    }
+  }
+
+  .nav-user-button {
+    color: #fff;
+    padding: 10px 10px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Roboto;
+    width: 100%;
+    transition: 0.2s all ease;
+    position: absolute;
+    bottom: 40px;
+
+    .anticon {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.navigation {
+    width: 200px;
+  }
+}

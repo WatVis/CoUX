@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #202442;
+  font-family: Roboto;
+}
+
+.blured {
+  filter: blur(5px);
+}
+
+.rtl {
+  direction: rtl !important;
+}
+
+.darker {
+  background: rgba($color: #000000, $alpha: 0.05);
+}
+
+#root {
+  height: 100%;
+}
+
+.wrapper {
+  transition: all 0.3s ease-in;
+  height: 100%;
+
+  &.navigation {
+    transform: translateX(-200px);
+  }
+}
+
+.wrapper-scale {
+  transition: all 0.3s ease-in;
+  background: #262b4e;
+  height: 100%;
+  &.navigation {
+    transform-origin: right;
+    transform: scale(0.85);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.ant-message {
+  color: #262b4e;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// fonts icons //
+@font-face {
+  font-family: "icomoon";
+  src: url("../assets/fonts/icons/icomoon.eot?1i2p2g");
+  src: url("../assets/fonts/icons/icomoon.eot?1i2p2g#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/icons/icomoon.ttf?1i2p2g") format("truetype"),
+    url("../assets/fonts/icons/icomoon.woff?1i2p2g") format("woff"),
+    url("../assets/fonts/icons/icomoon.svg?1i2p2g#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-comment-slash-solid:before {
+  content: "\e900";
+}
+.icon-frown-solid:before {
+  content: "\e901";
+}
+.icon-meh-blank-solid:before {
+  content: "\e902";
+}
+.icon-minus-circle-solid:before {
+  content: "\e903";
+}
+.icon-question-solid:before {
+  content: "\e904";
+}
+.icon-smile-solid:before {
+  content: "\e905";
+}
+
+.ant-modal-content {
+  background: #3c4267 !important;
+}
+
+.ant-modal-confirm-title {
+  color: #f9f9f9 !important;
+}
+
+.ant-message {
+  color: #f9f9f9 !important;
+}
+
+.ant-popover-arrow {
+  display: none;
+}

@@ -1,0 +1,21 @@
+.projects {
+  height: 100%;
+}
+
+.ant-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  color: #f9f9f9;
+  font-weight: 300;
+}
+
+.project-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

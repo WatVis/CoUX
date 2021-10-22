@@ -1,0 +1,82 @@
+%user-p {
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: 300;
+  margin: 0;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 20px;
+  transition: 0.2s all ease;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+  .user-email {
+    @extend %user-p;
+    color: #74789d;
+    transition: 0.2s all ease;
+    margin-right: 15px;
+    letter-spacing: 1px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ant-badge-dot {
+      box-shadow: none;
+    }
+    .user-dropdown-icon {
+      @extend %user-p;
+      margin-left: 10px;
+      color: #74789d;
+      font-size: 12px;
+      transition: 0.2s all ease;
+    }
+  }
+
+  &:hover {
+    .avatar {
+      .user-dropdown-icon {
+        color: #f9f9f9;
+      }
+    }
+    .user-email {
+      color: #f9f9f9;
+    }
+  }
+}
+
+.user-dropdown-button {
+  color: #fff;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Roboto;
+  width: 100%;
+  transition: 0.2s all ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

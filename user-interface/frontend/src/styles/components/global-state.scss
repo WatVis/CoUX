@@ -1,0 +1,57 @@
+.global-state {
+  height: 5px;
+  background: #212442;
+  width: 100%;
+  position: relative;
+}
+
+.global-state-container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 5px;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .global-state-segments-container {
+    width: 100%;
+    position: relative;
+    left: 0;
+    height: 100%;
+  }
+}
+
+.global-state-segment {
+  position: relative;
+  left: 0;
+  height: 100%;
+  margin-right: 1px;
+  margin-left: 1px;
+  float: left;
+
+  &.not-labelled {
+    background: rgb(255, 183, 71);
+  }
+  &.agreed {
+    background: #3ace7c;
+  }
+  &.disagreed {
+    background: #f9f9f9;
+  }
+  &.in-progress {
+    background: rgb(69, 185, 246);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+}

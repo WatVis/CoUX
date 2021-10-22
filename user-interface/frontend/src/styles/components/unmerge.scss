@@ -1,0 +1,94 @@
+.unmerge-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background: rgba($color: #000000, $alpha: 0.4);
+  z-index: 10;
+  left: 0;
+}
+
+.unmerge {
+  width: 85%;
+  height: auto;
+  overflow: hidden;
+  background: #262b4e;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    border-radius: 10px 0 5px 0;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    background: #ff4d4f;
+    cursor: pointer;
+    transition: 0.2s all ease;
+
+    &:hover {
+      background: #ff6466;
+    }
+  }
+
+  .unmerge-header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px 3px;
+    border-radius: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.unmerge-body {
+  width: 100%;
+  padding: 0 10px;
+  padding-bottom: 20px;
+
+  .unmerge-info {
+    text-align: justify;
+    color: #ff6466;
+    padding: 0 5px;
+  }
+
+  .child-popover {
+    min-width: 100%;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &.is-active {
+      border: 1px solid #f53e4c;
+    }
+    &:hover {
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) !important;
+      border: 1px solid #e96c76;
+    }
+
+    .discussion-card-header {
+      padding-top: 0;
+      .discussion-segment {
+        padding-top: 0;
+        .segment-heuristic p {
+          width: 135px;
+        }
+      }
+    }
+  }
+
+  .unmerge-btn {
+    margin-top: 10px;
+  }
+}

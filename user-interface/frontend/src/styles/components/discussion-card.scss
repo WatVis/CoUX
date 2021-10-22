@@ -1,0 +1,235 @@
+.ant-popover-inner {
+  background: #2c3160 !important;
+  box-shadow: none !important;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), 0px -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.child-popover {
+  position: relative;
+  display: flex;
+  min-width: 375px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #2c3160;
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px -4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: 0.3s ease all;
+  z-index: 5;
+  top: 0%;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  &.is-active {
+    border: 1px solid #f53e4c;
+  }
+
+  &.merge-card {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  &.active {
+    transform: scale(0.92);
+  }
+
+  &.agreed {
+  }
+
+  &.merge {
+    border-bottom: 2px solid #71c9ce;
+  }
+
+  .merged {
+    color: #444;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #f9f9f9;
+    padding: 2px 5px;
+    border-radius: 5px 0 5px 0;
+    z-index: 2;
+  }
+
+  .not-merged {
+    display: none;
+  }
+
+  .discussion-card-container {
+    width: 100%;
+
+    .discussion-segment {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding-top: 0 !important;
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        color: #969dcd;
+        margin: 0;
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      .segment-icon {
+        position: absolute;
+        right: -15px;
+        top: 2px;
+        font-size: 15px;
+        color: #fce38a;
+      }
+    }
+
+    .status-badge {
+      z-index: auto;
+      width: 15px;
+      height: 15px;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      white-space: nowrap;
+      text-align: center;
+      background: #1e223f;
+      border-radius: 3px;
+      box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 2px;
+      right: 2px;
+    }
+
+    .ant-badge {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .discussion-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      background: rgba($color: #000000, $alpha: 0.1);
+
+      .discussion-card-avatar {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        span {
+          font-size: 20px;
+          font-weight: 500;
+          color: #f9f9f9;
+        }
+      }
+
+      .segment-heuristic {
+        color: #3ace7c;
+        font-weight: 500;
+        height: 100%;
+
+        .anticon {
+          margin-left: 5px;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          border-radius: 3px;
+          color: #f9f9f9;
+          margin: 0;
+          background: rgba(255, 255, 255, 0.1);
+          margin-bottom: 3px;
+          width: 160px;
+          height: 20px;
+          line-height: 17px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          padding: 2px 5px;
+        }
+      }
+    }
+
+    .discussion-card-body {
+      padding: 10px 20px;
+      padding-top: 0;
+      transition: 0.3s all ease;
+      .discussion-segment {
+        p {
+          margin-top: 5px;
+        }
+      }
+      .last-comment {
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        .ant-carousel {
+          width: 100%;
+        }
+        p {
+          font-size: 15px;
+          margin-top: 0;
+          word-break: break-all;
+          color: #f9f9f9;
+          text-align: justify;
+          font-weight: 400;
+          white-space: nowrap;
+          width: 350px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          .ant-avatar {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .discussion-card-footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0 5px;
+      border-radius: 5px 0 5px 0;
+      color: #f9f9f9;
+      font-size: 12px;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      right: 0;
+      top: 5px;
+
+      .left {
+        margin-right: 5px;
+      }
+
+      .right,
+      .left {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.3);
+
+        &:hover {
+          color: #f9f9f9;
+        }
+      }
+    }
+  }
+}

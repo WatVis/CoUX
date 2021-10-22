@@ -1,0 +1,172 @@
+.project-sidebar {
+  width: 420px;
+  margin: 20px 15px;
+  position: fixed;
+  top: 0;
+  height: calc(100vh - 40px);
+  padding-top: 20px;
+  background: #202442;
+  right: 0;
+  z-index: 99;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -1px 0px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding-top: 40px;
+    height: 100%;
+  }
+
+  // padding: 0 30px;
+
+  .project-sidebar-details {
+    padding: 0 15px;
+    background: rgba($color: #000000, $alpha: 0.1);
+    padding-bottom: 5px;
+    .detail-header {
+      padding-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      h3 {
+        font-size: 20px;
+        color: #f9f9f9;
+        margin: 0;
+        // font-weight: 400;
+      }
+
+      span {
+        color: #797ea3;
+      }
+    }
+
+    .discussion-segment {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        color: #969dcd;
+        margin: 0;
+        display: block;
+        margin-bottom: 5px;
+        position: relative;
+        text-align: left;
+      }
+
+      .segment-icon {
+        position: absolute;
+        right: -20px;
+        top: 2px;
+        font-size: 15px;
+        color: #fce38a;
+      }
+    }
+
+    .status-badge {
+      z-index: auto;
+      width: 15px;
+      height: 15px;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      white-space: nowrap;
+      text-align: center;
+      background: #1e223f;
+      border-radius: 3px;
+      box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 2px;
+      right: 2px;
+    }
+
+    .ant-badge {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .discussion-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 5px;
+      padding-top: 10px;
+
+      .unmerge-btn {
+        position: absolute;
+        top: 20px;
+        height: 25px;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        border-radius: 0 0 5px 5px;
+      }
+
+      .discussion-card-avatar {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        span {
+          font-size: 20px;
+          font-weight: 500;
+          color: #f9f9f9;
+        }
+      }
+
+      .segment-heuristic {
+        color: #3ace7c;
+        font-weight: 500;
+        height: 100%;
+
+        .anticon {
+          margin-left: 5px;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          border-radius: 3px;
+          color: #f9f9f9;
+          margin: 0;
+          background: rgba(255, 255, 255, 0.1);
+          margin-bottom: 3px;
+          width: 180px;
+          height: 20px;
+          line-height: 17px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          padding: 2px 5px;
+        }
+      }
+    }
+
+    .description {
+      color: #585e8a;
+      margin: 0;
+      // text-align: justify;
+    }
+  }
+}

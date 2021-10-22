@@ -1,0 +1,76 @@
+// ./antd.customize.less
+@text-color: #f9f9f9;
+@heading-color: #f9f9f9;
+// Popover distance with trigger
+@popover-bg: #3c4267;
+@background-color-base: #3c4267;
+@primary-color: #f53e4c;
+@link-color: #f53e4c;
+@component-background: #3c4267;
+
+// Select
+// ---
+@select-border-color: #b16450;
+@select-item-selected-color: @text-color;
+@select-item-selected-font-weight: 500;
+@select-item-selected-bg: #262b4e;
+// @select-item-active-bg: @item-hover-bg;
+@select-item-active-bg: #202442;
+@select-dropdown-vertical-padding: @dropdown-vertical-padding;
+@select-dropdown-font-size: @dropdown-font-size;
+@select-dropdown-line-height: @dropdown-line-height;
+@select-dropdown-height: 32px;
+// @select-background: @component-background;
+@select-background: @component-background;
+@select-clear-background: @select-background;
+@select-selection-item-bg: @background-color-base;
+@select-selection-item-border-color: @border-color-split;
+@select-single-item-height-lg: 40px;
+@select-multiple-item-height: @input-height-base - @input-padding-vertical-base *
+  2; // Normal 24px
+@select-multiple-item-height-lg: 32px;
+@select-multiple-item-spacing-half: ceil(@input-padding-vertical-base / 2);
+@select-multiple-disabled-background: @input-disabled-bg;
+@select-multiple-item-disabled-color: #bfbfbf;
+@select-multiple-item-disabled-border-color: @select-border-color;
+@select-background: #202442;
+@select-dropdown-bg: #3c4267;
+
+// Input
+// ---
+@input-height-base: @height-base;
+@input-height-lg: 50px;
+@input-height-sm: @height-sm;
+@input-padding-horizontal: @control-padding-horizontal - 1px;
+@input-padding-horizontal-base: @input-padding-horizontal;
+@input-padding-horizontal-sm: @control-padding-horizontal-sm - 1px;
+@input-padding-horizontal-lg: 30px;
+@input-padding-vertical-base: max(
+  round((@input-height-base - @font-size-base * @line-height-base) / 2 * 10) /
+    10 - @border-width-base,
+  3px
+);
+@input-padding-vertical-sm: max(
+  round((@input-height-sm - @font-size-base * @line-height-base) / 2 * 10) / 10 -
+    @border-width-base,
+  0
+);
+@input-padding-vertical-lg: ceil(
+    (@input-height-lg - @font-size-lg * @line-height-base) / 2 * 10
+  ) / 10 - @border-width-base;
+@input-placeholder-color: #4a4f76;
+@input-color: @text-color;
+@input-icon-color: @input-color;
+@input-border-color: @border-color-base;
+@input-bg: #2e315a;
+@input-number-hover-border-color: @input-hover-border-color;
+@input-number-handler-active-bg: #f4f4f4;
+@input-number-handler-hover-bg: @primary-5;
+@input-number-handler-bg: @component-background;
+@input-number-handler-border-color: @border-color-base;
+@input-addon-bg: @background-color-light;
+@input-hover-border-color: @primary-5;
+@input-disabled-bg: @disabled-bg;
+@input-outline-offset: 0 0;
+@input-icon-hover-color: fade(@black, 85%);
+@input-disabled-color: @disabled-color;

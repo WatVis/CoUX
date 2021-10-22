@@ -1,0 +1,120 @@
+.project-card {
+  width: 270px;
+  height: 220px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: inline-block;
+
+  .project-card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #3c4166;
+    border-radius: 2px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 3px;
+    overflow: hidden;
+
+    .project-thumbnail {
+      width: 100%;
+      height: 150px;
+      position: relative;
+      display: block;
+
+      .player-wrapper {
+        position: relative;
+        overflow: hidden;
+        // padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+        .thumbnail-image {
+          height: 150px;
+          width: 2700px;
+        }
+
+        .scrub-bar {
+          background-color: #f53e4c;
+          width: 3px;
+          height: inherit;
+          top: 0;
+          left: 0;
+          position: absolute;
+          pointer-events: none;
+          opacity: 0;
+          height: 150px;
+        }
+      }
+
+      .react-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .project-duration {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        padding: 2px 5px;
+        border-radius: 2px;
+        font-size: 11px;
+      }
+
+      .project-status {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 5px;
+        border-radius: 2px;
+        font-size: 12px;
+        p {
+          margin: 0;
+        }
+
+        .status-indicator {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: rgb(97, 202, 255);
+          margin-right: 5px;
+        }
+      }
+
+      &:hover {
+        .scrub-bar {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .project-info {
+      width: 100%;
+      padding: 10px;
+
+      h3 {
+        margin: 0;
+        color: #f9f9f9;
+        font-weight: 400;
+      }
+
+      .project-info-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #747896;
+
+        .comments {
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
