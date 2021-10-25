@@ -7,6 +7,8 @@ This repo contains the code for two main parts of the system: 1) the video analy
 
 A video demostration of the system can be viewed [here](https://youtu.be/cqFq6zF-nG8).
 
+<img src="https://www.jeffjianzhao.com/assets/img/snapshots/coux.png" width="100%" />
+
 ## Video Analysis Engine
 
 Follow the instuctions in the `README.md` under the `video-analysis-engine` folder to extract the acoustic, visual, and textual features.
