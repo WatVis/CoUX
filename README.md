@@ -11,8 +11,8 @@ A video demostration of the system can be viewed [here](https://youtu.be/cqFq6zF
 
 ## Video Analysis Engine
 
-Follow the instuctions in the `README.md` under the `video-analysis-engine` folder to extract the acoustic, visual, and textual features.
+Follow the instructions in the `README.md` under the `video-analysis-engine` folder to extract the acoustic, visual, and textual features.
 
 ## User Interface
 
-Follow the instuctions in the `README.md` under the `user-interface` folder to run/deploy the backend and frontend.
+Follow the instructions in the `README.md` under the `user-interface` folder to run/deploy the backend and frontend.
