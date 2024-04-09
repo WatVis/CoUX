@@ -5,7 +5,7 @@ CoUX is a collaborative visual analytics tool to support multiple UX evaluators 
 This repo contains the code for two main parts of the system: 1) the video analysis engine, and 2) the user interface. The code is in corresponding with the following paper:
 > Ehsan Jahangirzadeh Soure*, Emily Kuang*, Mingming Fan, Jian Zhao. [CoUX: Collaborative Visual Analysis of Think-Aloud Usability Test Videos for Digital Interfaces](https://ieeexplore.ieee.org/document/9552211). IEEE Transactions on Visualization and Computer Graphics (Proceedings of VIS'21), 2022. 
 
-A video demostration of the system can be viewed [here](https://youtu.be/cqFq6zF-nG8).
+A video demonstration of the system can be viewed [here](https://youtu.be/cqFq6zF-nG8).
 
 <img src="https://www.jeffjianzhao.com/paper-imgs/coux.png" width="100%" />
 
